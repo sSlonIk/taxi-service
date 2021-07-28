@@ -26,6 +26,7 @@ public class ConnectionUtil {
         try {
             return DriverManager.getConnection(URL, dbProperties);
         } catch (SQLException e) {
+
             throw new RuntimeException("Can't create connection to DB ", e);
         }
     }
