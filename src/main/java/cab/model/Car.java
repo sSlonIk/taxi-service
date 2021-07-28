@@ -7,10 +7,10 @@ import java.util.Objects;
 public class Car {
     private Long id;
     private String model;
-    private cab.model.Manufacturer manufacturer;
-    private List<cab.model.Driver> drivers;
+    private Manufacturer manufacturer;
+    private List<Driver> drivers;
 
-    public Car(String model, cab.model.Manufacturer manufacturer) {
+    public Car(String model, Manufacturer manufacturer) {
         this.model = model;
         this.manufacturer = manufacturer;
         drivers = new ArrayList<>();
@@ -32,19 +32,19 @@ public class Car {
         this.model = model;
     }
 
-    public cab.model.Manufacturer getManufacturer() {
+    public Manufacturer getManufacturer() {
         return manufacturer;
     }
 
-    public void setManufacturer(cab.model.Manufacturer manufacturer) {
+    public void setManufacturer(Manufacturer manufacturer) {
         this.manufacturer = manufacturer;
     }
 
-    public List<cab.model.Driver> getDrivers() {
+    public List<Driver> getDrivers() {
         return drivers;
     }
 
-    public void setDrivers(List<cab.model.Driver> drivers) {
+    public void setDrivers(List<Driver> drivers) {
         this.drivers = drivers;
     }
 

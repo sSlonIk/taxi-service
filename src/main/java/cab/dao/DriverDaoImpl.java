@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Dao
-public class DriverDaoImpl implements cab.dao.DriverDao {
+public class DriverDaoImpl implements DriverDao {
     @Override
     public Driver create(Driver driver) {
         String query = "INSERT INTO drivers (name, license_number, login, password) "

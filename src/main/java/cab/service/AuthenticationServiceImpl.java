@@ -8,7 +8,7 @@ import cab.model.Driver;
 import java.util.Optional;
 
 @Service
-public class AuthenticationServiceImpl implements cab.service.AuthenticationService {
+public class AuthenticationServiceImpl implements AuthenticationService {
     @Inject
     private DriverService driverService;
 
