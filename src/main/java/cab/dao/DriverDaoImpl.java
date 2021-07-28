@@ -4,6 +4,8 @@ import cab.exception.DataProcessingException;
 import cab.lib.Dao;
 import cab.model.Driver;
 import cab.util.ConnectionUtil;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -15,6 +17,8 @@ import java.util.Optional;
 
 @Dao
 public class DriverDaoImpl implements DriverDao {
+    private static final Logger log = LogManager.getLogger(DriverDaoImpl.class);
+
     @Override
     public Driver create(Driver driver) {
         String query = "INSERT INTO drivers (name, license_number, login, password) "
@@ -33,6 +37,7 @@ public class DriverDaoImpl implements DriverDao {
             }
             return driver;
         } catch (SQLException e) {
+            log.error("Problems with creating driver: " + driver);
             throw new DataProcessingException("Couldn't create "
                     + driver + ". ", e);
         }
@@ -51,6 +56,7 @@ public class DriverDaoImpl implements DriverDao {
             }
             return Optional.ofNullable(driver);
         } catch (SQLException e) {
+            log.error("Problems with getting driver with ID:  " + id);
             throw new DataProcessingException("Couldn't get driver by id " + id, e);
         }
     }
@@ -67,6 +73,7 @@ public class DriverDaoImpl implements DriverDao {
             }
             return drivers;
         } catch (SQLException e) {
+            log.error("Problems with getting all drivers");
             throw new DataProcessingException("Couldn't get a list of drivers from driversDB.",
                     e);
         }
@@ -89,6 +96,7 @@ public class DriverDaoImpl implements DriverDao {
             statement.executeUpdate();
             return driver;
         } catch (SQLException e) {
+            log.error("Problems with updating driver: " + driver);
             throw new DataProcessingException("Couldn't update "
                     + driver + " in driversDB.", e);
         }
@@ -102,6 +110,7 @@ public class DriverDaoImpl implements DriverDao {
             statement.setLong(1, id);
             return statement.executeUpdate() > 0;
         } catch (SQLException e) {
+            log.error("Problems with deleting driver with ID: " + id);
             throw new DataProcessingException("Couldn't delete driver with id " + id, e);
         }
     }
@@ -132,6 +141,7 @@ public class DriverDaoImpl implements DriverDao {
             }
             return Optional.ofNullable(driver);
         } catch (SQLException e) {
+            log.error("Problems with login: " + login);
             throw new DataProcessingException("Couldn't get driver by login: " + login, e);
         }
     }
