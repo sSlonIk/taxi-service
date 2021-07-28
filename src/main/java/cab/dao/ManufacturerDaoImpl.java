@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Dao
-public class ManufacturerDaoImpl implements cab.dao.ManufacturerDao {
+public class ManufacturerDaoImpl implements ManufacturerDao {
     @Override
     public Manufacturer create(Manufacturer manufacturer) {
         String query = "INSERT INTO manufacturers (name, country) VALUES (?,?)";

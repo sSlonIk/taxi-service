@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class DriverServiceImpl implements cab.service.DriverService {
+public class DriverServiceImpl implements DriverService {
     @Inject
     private DriverDao driverDao;
 
