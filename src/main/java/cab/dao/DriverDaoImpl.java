@@ -1,10 +1,9 @@
 package cab.dao;
 
-import mate.exception.DataProcessingException;
-import mate.lib.Dao;
-import mate.model.Driver;
-import mate.util.ConnectionUtil;
-
+import cab.exception.DataProcessingException;
+import cab.lib.Dao;
+import cab.model.Driver;
+import cab.util.ConnectionUtil;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -15,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Dao
-public class DriverDaoImpl implements mate.dao.DriverDao {
+public class DriverDaoImpl implements cab.dao.DriverDao {
     @Override
     public Driver create(Driver driver) {
         String query = "INSERT INTO drivers (name, license_number, login, password) "

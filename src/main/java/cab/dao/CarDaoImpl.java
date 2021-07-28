@@ -6,7 +6,6 @@ import cab.model.Car;
 import cab.model.Driver;
 import cab.model.Manufacturer;
 import cab.util.ConnectionUtil;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

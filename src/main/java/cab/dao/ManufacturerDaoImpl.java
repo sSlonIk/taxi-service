@@ -1,10 +1,9 @@
 package cab.dao;
 
-import mate.exception.DataProcessingException;
-import mate.lib.Dao;
-import mate.model.Manufacturer;
-import mate.util.ConnectionUtil;
-
+import cab.exception.DataProcessingException;
+import cab.lib.Dao;
+import cab.model.Manufacturer;
+import cab.util.ConnectionUtil;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -15,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Dao
-public class ManufacturerDaoImpl implements mate.dao.ManufacturerDao {
+public class ManufacturerDaoImpl implements cab.dao.ManufacturerDao {
     @Override
     public Manufacturer create(Manufacturer manufacturer) {
         String query = "INSERT INTO manufacturers (name, country) VALUES (?,?)";

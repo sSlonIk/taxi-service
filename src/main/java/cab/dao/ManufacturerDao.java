@@ -1,6 +1,6 @@
 package cab.dao;
 
-import mate.model.Manufacturer;
+import cab.model.Manufacturer;
 
-public interface ManufacturerDao extends mate.dao.GenericDao<Manufacturer> {
+public interface ManufacturerDao extends cab.dao.GenericDao<Manufacturer> {
 }
