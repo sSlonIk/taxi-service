@@ -16,7 +16,7 @@ import java.io.IOException;
 @WebServlet(urlPatterns = "/login")
 public class LoginController extends HttpServlet {
     private static final String DRIVERID = "driver_id";
-    private static final Injector injector = Injector.getInstance("mate");
+    private static final Injector injector = Injector.getInstance("cab");
     private final AuthenticationService authentication =
             (AuthenticationService) injector.getInstance(AuthenticationService.class);
 
