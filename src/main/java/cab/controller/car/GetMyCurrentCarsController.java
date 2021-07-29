@@ -15,7 +15,7 @@ import java.util.List;
 @WebServlet(urlPatterns = "/cars/current")
 public class GetMyCurrentCarsController extends HttpServlet {
     private static final String DRIVERID = "driver_id";
-    private static final Injector injector = Injector.getInstance("mate");
+    private static final Injector injector = Injector.getInstance("cab");
     private final CarService carService = (CarService) injector.getInstance(CarService.class);
 
     @Override

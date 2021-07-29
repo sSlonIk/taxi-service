@@ -4,14 +4,14 @@
 </style>
 <html>
 <head>
-    <title>My team</title>
+    <title>My project</title>
 </head>
 <body>
 <form method="post" id="redirect"></form>
-<h1 class="table_dark">Hello, mates</h1>
+<h1 class="table_dark">Hello my Friend!</h1>
 <table class="table_dark">
     <tr>
-        <th>Redirect to</th>
+        <th>Welcome to my project  Taxi service</th>
     </tr>
     <tr><td><a href="${pageContext.request.contextPath}/drivers/">Display All Drivers</a></td></tr>
     <tr><td><a href="${pageContext.request.contextPath}/cars/">Display All Cars</a></td></tr>
