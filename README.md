@@ -3,25 +3,25 @@
 >Easy understanding service
  
 ![car](https://services.audi.ru/landings/audi-exclusive/img/models/a5-sportback/LC_PR_AEEXC096/2.png)
-##The main goal:
+## The main goal:
 ******************************
    The main goal of this project is to 
 show how easy it is to create your own taxi 
 service with an authentication system and driver 
 allocation for a specific car.
 
-####Functions that may be useful for working with controls in this application:
+#### Functions that may be useful for working with controls in this application:
 >- Create a new car / manufacturer / driver;
 >- Display all cars / manufacturers / drivers;
 >- Add driver to car;
 >- Remove driver from car;
-##Project based on SOLID principles and 3-layer architecture:
+## Project based on SOLID principles and 3-layer architecture:
 ******************************
 >- Data access layer (DAO);
 >- Application layer (services);
 >- Presentation layer (controllers);
 
-##Used technologies:
+## Used technologies:
 ******************************
 >- Java 11
 >-  Maven 
@@ -36,7 +36,7 @@ allocation for a specific car.
 >-  DI(custom injector)
 >-  Log4j2
 
-##Let`s go check the app :)
+## Let`s go check the app :)
 
 ******************************
 Just a few steps and go on:
