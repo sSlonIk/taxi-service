@@ -6,6 +6,7 @@ import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -13,6 +14,7 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
+@WebFilter(urlPatterns = "/*")
 public class AuthenticationFilter implements Filter {
     private static final String DRIVERID = "driver_id";
     private Set<String> allowed = new HashSet<>();

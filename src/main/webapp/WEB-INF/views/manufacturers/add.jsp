@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <style>
-    <%@include file='/webapp/WEB-INF/views/css/table_dark.css' %>
+    <%@include file='/WEB-INF/views/css/table_dark.css' %>
 </style>
 <html>
 <head>

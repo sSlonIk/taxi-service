@@ -4,13 +4,15 @@ import cab.lib.Injector;
 import cab.model.Driver;
 import cab.service.DriverService;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+@WebServlet(urlPatterns = "/drivers/add")
 public class AddDriverController extends HttpServlet {
-    private static final Injector injector = Injector.getInstance("mate");
+    private static final Injector injector = Injector.getInstance("cab");
     private final DriverService driverService = (DriverService) injector
             .getInstance(DriverService.class);
 
@@ -27,8 +29,7 @@ public class AddDriverController extends HttpServlet {
         String licenseNumber = req.getParameter("license_number");
         String login = req.getParameter("login");
         String password = req.getParameter("password");
-        Driver driver = new Driver(name, licenseNumber, login, password);
-        driverService.create(driver);
-        resp.sendRedirect("/drivers/add");
+        driverService.create(new Driver(name, licenseNumber, login, password));
+        resp.sendRedirect("/login");
     }
 }

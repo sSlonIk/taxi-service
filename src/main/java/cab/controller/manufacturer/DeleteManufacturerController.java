@@ -2,13 +2,16 @@ package cab.controller.manufacturer;
 
 import cab.lib.Injector;
 import cab.service.ManufacturerService;
+
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+@WebServlet(urlPatterns = "/manufacturers/delete")
 public class DeleteManufacturerController extends HttpServlet {
-    private static final Injector injector = Injector.getInstance("mate");
+    private static final Injector injector = Injector.getInstance("cab");
     private final ManufacturerService manufacturerService = (ManufacturerService) injector
             .getInstance(ManufacturerService.class);
 
