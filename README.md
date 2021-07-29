@@ -2,8 +2,7 @@
 # Taxi service
 >Easy understanding service
  
-![car](https://c0.klipartz.com/pngpicture/177/640/gratis-png-audi-a3-concesionaria-de-autos-compactos-audi.png)
-
+![car](https://services.audi.ru/landings/audi-exclusive/img/models/a5-sportback/LC_PR_AEEXC096/2.png)
 ##The main goal:
 ******************************
    The main goal of this project is to 
