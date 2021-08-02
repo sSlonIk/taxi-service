@@ -4,11 +4,13 @@ import cab.lib.Injector;
 import cab.model.Manufacturer;
 import cab.service.ManufacturerService;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+@WebServlet(urlPatterns = "/manufacturers/add")
 public class AddManufacturerController extends HttpServlet {
     private static final Injector injector = Injector.getInstance("cab");
     private final ManufacturerService manufacturerService = (ManufacturerService) injector
@@ -26,6 +28,6 @@ public class AddManufacturerController extends HttpServlet {
         String name = req.getParameter("name");
         String country = req.getParameter("country");
         manufacturerService.create(new Manufacturer(name, country));
-        resp.sendRedirect("/manufacturers/add");
+        resp.sendRedirect("/manufacturers/all");
     }
 }
