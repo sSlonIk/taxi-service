@@ -2,12 +2,11 @@ package cab.controller.manufacturer;
 
 import cab.lib.Injector;
 import cab.service.ManufacturerService;
-
 import javax.servlet.annotation.WebServlet;
+import java.io.IOException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
 @WebServlet(urlPatterns = "/manufacturers/delete")
 public class DeleteManufacturerController extends HttpServlet {
