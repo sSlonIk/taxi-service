@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 
 @WebServlet(urlPatterns = "/cars/current")
 public class GetMyCurrentCarsController extends HttpServlet {
-    private static final String DRIVERID = "driver_id";
+    private static final String DRIVER_ID = "driver_id";
     private static final Injector injector = Injector.getInstance("mate");
     private final CarService carService = (CarService) injector.getInstance(CarService.class);
 
@@ -22,7 +22,7 @@ public class GetMyCurrentCarsController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         HttpSession session = req.getSession();
-        List<Car> cars = carService.getAllByDriver((Long) session.getAttribute(DRIVERID));
+        List<Car> cars = carService.getAllByDriver((Long) session.getAttribute(DRIVER_ID));
         req.setAttribute("cars", cars);
         req.getRequestDispatcher("/WEB-INF/views/cars/all.jsp").forward(req, resp);
     }
