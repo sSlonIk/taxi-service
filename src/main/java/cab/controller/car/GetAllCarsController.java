@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(urlPatterns = "/cars/")
 public class GetAllCarsController extends HttpServlet {
-    private static final Injector injector = Injector.getInstance("mate");
+    private static final Injector injector = Injector.getInstance("cab");
     private final CarService carService = (CarService) injector
             .getInstance(CarService.class);
 
