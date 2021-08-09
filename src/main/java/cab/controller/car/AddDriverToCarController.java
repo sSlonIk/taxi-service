@@ -5,11 +5,11 @@ import cab.model.Car;
 import cab.model.Driver;
 import cab.service.CarService;
 import cab.service.DriverService;
+import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
 public class AddDriverToCarController extends HttpServlet {
     private static final String DRIVERID = "driver_id";
