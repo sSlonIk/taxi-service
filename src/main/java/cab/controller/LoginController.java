@@ -2,7 +2,6 @@ package cab.controller;
 
 import cab.exception.AuthenticationExcception;
 import cab.lib.Injector;
-import cab.model.Driver;
 import cab.service.AuthenticationService;
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -10,7 +9,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 @WebServlet(urlPatterns = "/login")
 public class LoginController extends HttpServlet {
@@ -33,9 +31,6 @@ public class LoginController extends HttpServlet {
         try {
             req.getSession().setAttribute(DRIVER_ID,
                     authentication.login(login, password).getId());
-            Driver driver = authentication.login(login, password);
-            HttpSession session = req.getSession();
-            session.setAttribute(DRIVER_ID, driver.getId());
             resp.sendRedirect("/index");
         } catch (AuthenticationExcception e) {
             req.setAttribute("errorMessage", e.getMessage());
