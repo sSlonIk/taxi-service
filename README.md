@@ -47,7 +47,7 @@ Just a few steps and go on:
 3. Install MySQL and MySQL Workbench; 
 4. Create a schema and all the necessary tables by using the script from resources/init_db.sql in MySQL Workbench;
 5. In the /util/ConnectionUtil.java change the URL, MYSQL_DRIVER, USERNAME and PASSWORD properties to the ones you specified when installing MySQL;
-6. 6. After starting tomcat go to `http://localhost:8080` (or other port that you specified while configuring tomcat);
+6. After starting tomcat go to `http://localhost:8080` (or other port that you specified while configuring tomcat);
 7. Now you can use an app and see how it works;
 -----------------------------------
 -------------------------------------
